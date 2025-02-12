@@ -1,6 +1,7 @@
 import "./globals.css";
-
+import { ReactNode } from "react";
 import { Josefin_Sans } from "next/font/google";
+import Header from "@/components/Header";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -9,22 +10,23 @@ const josefin = Josefin_Sans({
 
 export const metadata = {
   title: {
-    template: "%s | Crypto news",
-    default: "Welcome | Crypto news",
+    template: "%s | Crypto News",
+    default: "Welcome | Crypto News",
   },
-  description: "Crypto news project",
+  description: "Crypto News project",
 };
-
-import { ReactNode } from "react";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen relative`}
+        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col`}
       >
-        <div className="flex-1 px-8 py-12 grid">
-          <main className=" max-w-7xl mx-auto w-full">{children}</main>
+        <Header />
+        <div className="flex-1 w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl border border-green-500">
+          <main className="flex flex-col min-h-screen border border-red-500">
+            {children}
+          </main>
         </div>
       </body>
     </html>
