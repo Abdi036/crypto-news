@@ -20,13 +20,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col`}
+        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col `}
       >
         <Header />
-        <div className="flex-1 w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl border border-green-500">
-          <main className="flex flex-col min-h-screen border border-red-500">
-            {children}
-          </main>
+        <div className="flex-1 w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl overflow-hidden h-full">
+          <main className="flex flex-col ">{children}</main>
         </div>
       </body>
     </html>
