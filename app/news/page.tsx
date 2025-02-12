@@ -1,4 +1,5 @@
 import Filter from "@/components/Filter";
+import News from "@/components/News";
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 
@@ -6,7 +7,6 @@ export default function page() {
   return (
     <div className="border border-red-500 p-5">
       <ul className="flex gap-4 items-center justify-between xs:gap-12 md:gap-16 w-full flex-wrap xs:flex-nowrap">
-        {/* Search Input */}
         <li className="relative flex items-center w-full xs:w-auto max-w-xs xs:max-w-md">
           <input
             type="text"
@@ -24,6 +24,7 @@ export default function page() {
           Get the latest and Trending news from around the world.
         </p>
       </div>
+      <News />
     </div>
   );
 }
