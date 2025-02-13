@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import Image from "next/image";
 import data from "@/lib/apiFetch";
 import Pagination from "./Pagination";
 import SearchAndSort from "./SearchAndSort";
@@ -79,12 +79,11 @@ export default function News() {
             className="mx-auto border border-primary-700 rounded-lg shadow-lg"
           >
             <div className="h-40 w-full overflow-hidden rounded-t-lg">
-              <Image
+              <img
                 src={news.thumbnail}
                 alt={news.title}
                 className="h-full w-full object-cover"
-                width={300}
-                height={300}
+                loading="lazy"
               />
             </div>
             <div className="p-4">

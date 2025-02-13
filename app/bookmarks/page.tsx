@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
+
 "use client";
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
 import Link from "next/link";
 import { useBookmarks } from "../_hook/useBookmarks";
 
@@ -22,13 +23,14 @@ export default function Page() {
           key={index}
           className="mx-auto border border-primary-700 rounded-lg shadow-lg"
         >
-          <div className="h-40 w-full overflow-hidden rounded-t-lg">
-            <Image
+          <div className="h-40 w-full overflow-hidden rounded-t-lg ">
+            <img
               src={bookmark.thumbnail}
               alt={bookmark.title}
               className="h-full w-full object-cover"
               width={300}
               height={300}
+              loading="lazy"
             />
           </div>
           <div className="p-4">

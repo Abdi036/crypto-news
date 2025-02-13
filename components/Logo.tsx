@@ -1,7 +1,7 @@
 // Logo Component
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../public/globe.svg";
+import logo from "../public/logo.png";
 
 function Logo() {
   return (
@@ -14,7 +14,7 @@ function Logo() {
         className="sm:w-16 sm:h-16 w-12 h-12"
       />
       <span className="text-xl font-semibold text-primary-100 xs:block hidden">
-        Crypto News
+        Crypto-Sight
       </span>
     </Link>
   );
