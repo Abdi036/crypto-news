@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 interface NewsItem {
   url: string;
@@ -12,47 +12,42 @@ interface NewsItem {
 }
 
 export default async function News() {
-  const url = "https://cryptocurrency-news2.p.rapidapi.com/v1/cryptodaily";
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "cfece4cd5dmsh23a9e718664b389p14581ajsn9fbff94e4638",
-      "x-rapidapi-host": "cryptocurrency-news2.p.rapidapi.com",
-    },
-  };
-
-  let data;
-
-  try {
-    const response = await fetch(url, options);
-    data = await response.json();
-  } catch (error) {
-    console.error("Failed to fetch news:", error);
-    return <div>Failed to load news.</div>;
-  }
-
-  if (!data || !data.data) {
-    return <div>No news data available.</div>;
+  const response = await fetch("http://localhost:8000/news");
+  const data = await response.json();
+  if (!data || data.length === 0) {
+    return (
+      <div className="text-primary-500 font-extrabold text-center mt-20 text-3xl">
+        No news data available !!!.
+      </div>
+    );
   }
 
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10">
-      {data.data.map((news: NewsItem, index: number) => (
-        <Card key={index} className="mx-auto border rounded-lg shadow-lg">
+      {data.map((news: NewsItem, index: number) => (
+        <Card
+          key={index}
+          className="mx-auto border border-primary-700 rounded-lg shadow-lg"
+        >
           <div className="h-40 w-full overflow-hidden rounded-t-lg">
-            <img
+            <Image
               src={news.thumbnail}
               alt={news.title}
               className="h-full w-full object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              width={300}
+              height={300}
+              
+               
             />
           </div>
           <div className="p-4">
-            <h3 className="text-lg font-semibold">{news.title}</h3>
-            <p className="mt-2 text-gray-700 line-clamp-3">
-              <p className="text-sm text-gray-500">
-                {news.createdAt.replace("+0000", "")}
-              </p>
+            <h3 className="text-lg font-semibold text-primary-100">
+              {news.title}
+            </h3>
+            <p className="text-sm text-primary-500 mt-2">
+              {news.createdAt.replace("+0000", "")}
+            </p>
+            <p className="mt-2 text-primary-500 line-clamp-3 ">
               {news.description}
             </p>
           </div>
@@ -61,7 +56,7 @@ export default async function News() {
               href={news.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-blue-600 hover:underline"
+              className="text-sm font-medium text-accent-600 hover:underline"
             >
               Read more
             </Link>

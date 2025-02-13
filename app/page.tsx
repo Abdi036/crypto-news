@@ -28,7 +28,7 @@ export default function Page() {
           blockchain innovations.
         </p>
         <Link
-          href="/crypto-news"
+          href="/news"
           className="bg-accent-500 px-4 md:px-6 py-3 md:py-4 text-primary-800 text-sm md:text-base font-semibold hover:bg-accent-600 transition-all rounded-md"
         >
           Explore Crypto News
