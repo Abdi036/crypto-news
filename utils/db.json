@@ -1,81 +1,60 @@
 {
   "news": [
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Bitcoin Breaks Through $50K Amid Market Optimism",
+      "description": "Bitcoin reached $50,000 after months of fluctuation, signaling renewed investor confidence.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2024-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-breaks-50k"
     },
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Bitcoin Surpasses $100K Mark, Setting New Record",
+      "description": "Bitcoin prices soar to $100,000 as global markets react to positive crypto adoption news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2025-01-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-record-100k"
     },
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Regulatory Approval Sparks Bitcoin’s $75K Surge",
+      "description": "Bitcoin jumps to $75,000 after governments ease cryptocurrency regulations worldwide.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2024-06-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-surges-75k"
     },
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Bitcoin Eyes $90K as Institutional Investments Grow",
+      "description": "Major firms invest in Bitcoin, pushing prices closer to $90,000.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2024-08-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-institutional-growth"
     },
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Bitcoin Reaches $30K, Defying Market Expectations",
+      "description": "In a surprising rally, Bitcoin crossed $30,000 after an extended bear market.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2022-07-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-30k-rally"
     },
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Bitcoin Plummets to $3K in Crypto Market Crash",
+      "description": "A massive selloff in the crypto market caused Bitcoin to fall to $3,000.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2020-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-crash-3k"
     },
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Bitcoin Reaches $105K on Bullish Momentum",
+      "description": "Bitcoin crosses $105,000, driven by positive global financial trends.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2025-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-105k"
     },
     {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
-      "thumbnail": "/coin_imgs/btc.jpg",
-      "createdAt": "2020-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
-    },
-    {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
-      "thumbnail": "/coin_imgs/btc.jpg",
-      "createdAt": "2025-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
-    },
-    {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
-      "thumbnail": "/coin_imgs/btc.jpg",
-      "createdAt": "2025-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
-    },
-    {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "title": "Bitcoin Sinks Below $10K Amidst Volatility",
+      "description": "Volatility returns as Bitcoin falls below the critical $10,000 support level.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2021-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example.com/news/bitcoin-10k-volatility"
     },
     {
       "title": "pepe Hits $100,000 for the First Time in Months",
@@ -124,7 +103,7 @@
       "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2023-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example23.com/news/bitcoin-50k"
     },
     {
       "title": "pepe Hits $100,000 for the First Time in Months",
@@ -138,7 +117,7 @@
       "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2023-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example56.com/news/bitcoin-50k"
     },
     {
       "title": "Bitcoin Hits $100,000 for the First Time in Months",
@@ -180,21 +159,28 @@
       "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2020-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example1.com/news/bitcoin-50k"
     },
     {
       "title": "shiba Hits $100,000 for the First Time in Months",
       "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2025-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example2.com/news/bitcoin-50k"
     },
     {
       "title": "Bitcoin Hits $100,000 for the First Time in Months",
       "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2021-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example3.com/news/bitcoin-50k"
+    },
+    {
+      "title": "Bitcoin Hits $100,000 for the First Time in Months",
+      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
+      "thumbnail": "/coin_imgs/btc.jpg",
+      "createdAt": "2025-02-11T10:30:00+0000",
+      "url": "https://example4.com/news/bitcoin-50k"
     },
     {
       "title": "Bitcoin Hits $100,000 for the First Time in Months",
@@ -208,21 +194,14 @@
       "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2025-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example5.com/news/bitcoin-50k"
     },
     {
       "title": "Bitcoin Hits $100,000 for the First Time in Months",
       "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
       "thumbnail": "/coin_imgs/btc.jpg",
       "createdAt": "2025-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
-    },
-    {
-      "title": "Bitcoin Hits $100,000 for the First Time in Months",
-      "description": "Bitcoin surged past $50,000 today as investor sentiment turned bullish after positive regulatory news.",
-      "thumbnail": "/coin_imgs/btc.jpg",
-      "createdAt": "2025-02-11T10:30:00+0000",
-      "url": "https://example.com/news/bitcoin-50k"
+      "url": "https://example6.com/news/bitcoin-50k"
     },
     {
       "title": "Bitcoin Hits $100,000 for the First Time in Months",

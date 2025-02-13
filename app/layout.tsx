@@ -2,6 +2,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { Josefin_Sans } from "next/font/google";
 import Header from "@/components/Header";
+import { BookmarkProvider } from "./_context/BookmarkContext";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -24,7 +25,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <Header />
         <div className="flex-1 w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl overflow-hidden h-full">
-          <main className="flex flex-col ">{children}</main>
+          <main className="flex flex-col ">
+            <BookmarkProvider>{children}</BookmarkProvider>
+          </main>
         </div>
       </body>
     </html>

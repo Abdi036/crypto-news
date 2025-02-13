@@ -6,6 +6,7 @@ import Image from "next/image";
 import data from "@/lib/apiFetch";
 import Pagination from "./Pagination";
 import SearchAndSort from "./SearchAndSort";
+import { useBookmarks } from "@/app/_hook/useBookmarks";
 
 export const metadata = {
   title: "News",
@@ -20,6 +21,12 @@ interface NewsItem {
 }
 
 export default function News() {
+  const { addBookmark } = useBookmarks();
+
+  const handleAddBookmark = (news: NewsItem) => {
+    addBookmark(news);
+  };
+
   const itemsPerPage = 9;
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
@@ -92,7 +99,10 @@ export default function News() {
               </p>
             </div>
             <div className="p-4 text-right flex justify-between items-center">
-              <button className="border border-primary-600 p-3 rounded-full text-sm hover:bg-primary-500 hover:text-primary-800 transition-all">
+              <button
+                className="border border-primary-600 p-3 rounded-full text-sm hover:bg-primary-500 hover:text-primary-800 transition-all"
+                onClick={() => handleAddBookmark(news)}
+              >
                 Add to bookmark
               </button>
               <Link

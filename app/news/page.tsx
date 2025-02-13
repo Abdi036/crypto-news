@@ -2,6 +2,10 @@ import React, { Suspense } from "react";
 import News from "@/components/News";
 import Spinner from "@/components/Spinner";
 
+export const metadata = {
+  title: "News",
+};
+
 export default function page() {
   return (
     <div className=" p-5">
