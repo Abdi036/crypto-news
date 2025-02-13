@@ -7,6 +7,10 @@ import data from "@/lib/apiFetch";
 import Pagination from "./Pagination";
 import SearchAndSort from "./SearchAndSort";
 
+export const metadata = {
+  title: "News",
+};
+
 interface NewsItem {
   url: string;
   title: string;
@@ -87,7 +91,10 @@ export default function News() {
                 {news.description}
               </p>
             </div>
-            <div className="p-4 text-right">
+            <div className="p-4 text-right flex justify-between items-center">
+              <button className="border border-primary-600 p-3 rounded-full text-sm hover:bg-primary-500 hover:text-primary-800 transition-all">
+                Add to bookmark
+              </button>
               <Link
                 href={news.url}
                 target="_blank"
