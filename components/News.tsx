@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import data from "@/lib/apiFetch";
+import Pagination from "./Pagination";
+import SearchAndSort from "./SearchAndSort";
 
 interface NewsItem {
   url: string;
@@ -17,14 +19,12 @@ export default function News() {
   const itemsPerPage = 9;
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortOption, setSortOption] = useState("new-to-old"); // Sorting state
+  const [sortOption, setSortOption] = useState("new-to-old");
 
-  // Filter news based on search query
   const filteredNews = data.filter((news: NewsItem) =>
     news.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Sort news based on selected option
   const sortedNews = filteredNews.sort((a: NewsItem, b: NewsItem) => {
     if (sortOption === "new-to-old") {
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
@@ -54,32 +54,13 @@ export default function News() {
 
   return (
     <div>
-      {/* Search Input and Sort Dropdown */}
-      <div className="flex flex-col sm:flex-row items-center justify-between mb-6">
-        {/* Search Input */}
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => {
-            setSearchQuery(e.target.value);
-            setCurrentPage(1);
-          }}
-          placeholder="Search news by title..."
-          className="px-4 py-2 border rounded-md text-primary-700 focus:outline-none focus:ring-2 focus:ring-accent-500 w-full max-w-lg mb-4 sm:mb-0"
-        />
-
-        {/* Sort Dropdown */}
-        <select
-          value={sortOption}
-          onChange={(e) => setSortOption(e.target.value)}
-          className="px-4 py-2 border rounded-md text-primary-700 focus:outline-none focus:ring-2 focus:ring-accent-500"
-        >
-          <option value="new-to-old">Newest to Oldest</option>
-          <option value="old-to-new">Oldest to Newest</option>
-        </select>
-      </div>
-
-      {/* News Grid */}
+      <SearchAndSort
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        sortOption={sortOption}
+        setSortOption={setSortOption}
+        setCurrentPage={setCurrentPage}
+      />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10">
         {currentNews.map((news: NewsItem, index: number) => (
           <Card
@@ -120,32 +101,11 @@ export default function News() {
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center mt-8">
-        {currentPage !== 1 ? (
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="px-4 py-2 bg-primary-700 rounded-md text-primary-200"
-          >
-            {"<<"}
-          </button>
-        ) : null}
-
-        <span className="mx-4 text-primary-500">
-          Page {currentPage} of {totalPages}
-        </span>
-
-        {currentPage !== totalPages ? (
-          <button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="px-4 py-2 bg-primary-700 text-primary-200 rounded-md"
-          >
-            {">>"}
-          </button>
-        ) : null}
-      </div>
+      <Pagination
+        totalPages={totalPages}
+        currentPage={currentPage}
+        handlePageChange={handlePageChange}
+      />
     </div>
   );
 }
