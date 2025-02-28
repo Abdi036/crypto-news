@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import data from "@/lib/apiFetch";
 import Pagination from "./Pagination";
 import SearchAndSort from "./SearchAndSort";
 import { useBookmarks } from "@/app/_hook/useBookmarks";
@@ -20,7 +19,11 @@ interface NewsItem {
   createdAt: string;
 }
 
-export default function News() {
+interface NewsProps {
+  data: NewsItem[];
+}
+
+export default function News({ data }: NewsProps) {
   const { addBookmark } = useBookmarks();
 
   const handleAddBookmark = (news: NewsItem) => {

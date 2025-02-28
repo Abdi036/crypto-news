@@ -1,12 +1,14 @@
 import React, { Suspense } from "react";
 import News from "@/components/News";
 import Spinner from "@/components/Spinner";
+import fetchData from "@/lib/apiFetch";
 
 export const metadata = {
   title: "News",
 };
 
-export default function page() {
+export default async function page() {
+  const data = await fetchData()
   return (
     <div className=" p-5">
       <div>
@@ -18,7 +20,7 @@ export default function page() {
         </p>
       </div>
       <Suspense fallback={<Spinner text={"loading news..."} />}>
-        <News />
+        <News data={data}/>
       </Suspense>
     </div>
   );
