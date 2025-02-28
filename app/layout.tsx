@@ -23,12 +23,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col `}
       >
-        <Header />
-        <div className="flex-1 w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl overflow-hidden h-full">
-          <main className="flex flex-col ">
-            <BookmarkProvider>{children}</BookmarkProvider>
-          </main>
-        </div>
+        <BookmarkProvider>
+          <Header />
+          <div className="flex-1 w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl overflow-hidden h-full">
+            <main className="flex flex-col ">{children}</main>
+          </div>
+        </BookmarkProvider>
       </body>
     </html>
   );
